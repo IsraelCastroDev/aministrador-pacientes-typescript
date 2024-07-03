@@ -10,10 +10,12 @@ function PatientForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<DraftPatient>();
 
   const registerPatient = (data: DraftPatient) => {
     addPatient(data);
+    reset();
   };
 
   return (
